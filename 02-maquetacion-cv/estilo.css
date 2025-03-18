@@ -1,10 +1,9 @@
 * {
-    /*border: red 1px solid;*/
+    border: red 1px solid;
 }
 
 html, body {
-    background-image: url(imagenes/manguitos.png);
-    background-repeat:repeat;
+    background-color:#b6e6e7;
     height: 100%;
     margin: 0;
     padding: 0; 
@@ -37,7 +36,6 @@ header h1 {
 }
 
 #main-menu ul {
-    
     display: flex;
     padding: 0;
     margin: 0;
@@ -65,13 +63,12 @@ nav {
     width: 100%;
     justify-content: flex-end;
 }
-nav a:hover {        /**/
-     
+
+nav a:hover {
     transform: scale(1.5);
 }
 
 nav a {
-    
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
@@ -80,20 +77,22 @@ nav a {
 
 h3 {
     color: #1f6c6f;
-    font-family:'Merriweather Sans', 'Helvetica', sans-serif;;
+    font-family:'Merriweather Sans', 'Helvetica', sans-serif;
 }
+
 #perfil {
     display: flex;
     flex-direction: row; 
     align-items: center; 
     padding: 60px;
-    background-color: #109498;
+    background-color: #1f6c6f;
     margin-bottom: 20px;
     max-width: 1000px; 
     margin-left: auto; 
     margin-right: auto; 
     border-radius: 50px;
     box-shadow: 5px 5px 10px #00000084; 
+    margin-top: 40px;
 }
 
 #perfil img {
@@ -125,6 +124,7 @@ h3 {
     align-self: center;
     margin: 5px 0 0 0;
 }
+
 #educacion {
     display: flex;
     flex-direction: row; 
@@ -132,13 +132,13 @@ h3 {
     justify-content: flex-start; 
     padding: 60px;
     background-color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;  /* Ajusta el margen inferior */
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20px;    /* Añadir margen izquierdo */
+    margin-right: 20px;   /* Añadir margen derecho */
     border-radius: 50px;
+    margin-top: 40px;  /* Mantén solo el margen superior */
 }
-
 #educacion div {
     display: flex;
     flex-direction: column;
@@ -152,16 +152,24 @@ h3 {
 
 #educacion h2 {
     font-size: 70px;
-    color: #1f6c6f;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px; 
+    border-radius: 0px; 
+    display: inline-block; 
+    background-color: #1f6c6f; 
 }
 
 #educacion h3 {
     font-size: 40px;
     color: #1f6c6f;
 }
+
 #educacion li {
     display: inline; 
 }
+
 #educacion p {
     text-align: center;
     line-height: 1.5;
@@ -178,7 +186,8 @@ h3 {
     position: relative;
     right: -50px; 
 }
-#educacion a{
+
+#educacion a {
     font-family: 'Lora', 'Helvetica', sans-serif;
     color: #1f6c6f;
     text-decoration: none;
@@ -188,17 +197,18 @@ h3 {
 
 section {
     background-color: #ffffff;
-    margin-bottom: 20px; 
-    padding: 20px;
+    margin: 10px;
+    margin-bottom: 40px; 
+    padding: 40px;
 }
 
-h2{
+h2 {
     color: #1f6c6f;
     font-size: 30px;
     font-family: 'Bebas Neue', 'Helvetica', sans-serif;
 }
 
-p{
+p {
     font-family: 'Lora', 'Helvetica', sans-serif;
 }
 
