@@ -3,7 +3,7 @@
 }
 
 html, body {
-    background-color:#b6e6e7;
+    background-color:#78d0d1;
     height: 100%;
     margin: 0;
     padding: 0; 
@@ -14,7 +14,7 @@ html, body {
 header {
     display: flex;
     color: #ffffff;
-    background-color: #1f6c6f;
+    background-color: #176163;
     padding: 10px;
     align-items: center;
     width: 100%;
@@ -76,7 +76,7 @@ nav a {
 }
 
 h3 {
-    color: #1f6c6f;
+    color: #176163;
     font-family:'Merriweather Sans', 'Helvetica', sans-serif;
 }
 #perfil {
@@ -90,7 +90,7 @@ h3 {
     margin-right: auto; 
     border-radius: 50px;
     margin-top: 40px;
-    max-width: 100%;
+    max-width: 90%;
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ h3 {
     height: 400px; 
     border-radius: 50%;
     margin-right: 55px; 
-    border: 10px dashed #1f6c6f; 
+    border: 10px dashed #176163; 
     padding: 10px;
     flex-shrink: 0; /* Evita que la imagen se reduzca */
 }
@@ -107,7 +107,7 @@ h3 {
 #perfil div {
     display: flex;
     flex-direction: column;
-    background-color: #1f6c6f;
+    background-color: #176163;
     padding: 40px;
     border-radius: 20px;
     flex-grow: 1;
@@ -136,7 +136,7 @@ h3 {
     align-items: center; 
     justify-content: flex-start; 
     padding: 60px;
-    background-color: #ffffff;
+    background-color: #c8fdff;
     margin-bottom: 40px;  /* Ajusta el margen inferior */
     max-width: 1400px;
     margin-left: 20px;    /* Añadir margen izquierdo */
@@ -163,12 +163,12 @@ h3 {
     padding: 20px; 
     border-radius: 20px; 
     display: inline-block; 
-    background-color: #1f6c6f; 
+    background-color: #176163; 
 }
 
 #educacion h3 {
     font-size: 40px;
-    color: #1f6c6f;
+    color: #176163;
 }
 
 #educacion li {
@@ -179,14 +179,14 @@ h3 {
     text-align: center;
     line-height: 1.5;
     font-size: 25px;
-    color: #1f6c6f;
+    color: #176163;
     margin: 0px 0 0 0;
 }
 
 #educacion img {
     width: 400px;
     border-radius: 50%;
-    border: 10px dashed #1f6c6f;
+    border: 10px dashed #176163;
     padding: 10px;
     position: relative;
     right: -50px; 
@@ -194,7 +194,7 @@ h3 {
 
 #educacion a {
     font-family: 'Lora', 'Helvetica', sans-serif;
-    color: #1f6c6f;
+    color: #176163;
     text-decoration: none;
     font-size: 25px;
     margin: 25px 0 0 0;
@@ -208,7 +208,7 @@ section {
 }
 
 h2 {
-    color: #1f6c6f;
+    color: #176163;
     font-size: 30px;
     font-family: 'Bebas Neue', 'Helvetica', sans-serif;
 }
@@ -221,7 +221,7 @@ p {
     display: flex;
     padding: 20px;
     color: #ffffff;
-    background-color: #1f6c6f;
+    background-color: #176163;
     font-size: 14px;
     box-sizing: border-box;
     width: 100%;
