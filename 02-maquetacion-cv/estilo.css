@@ -3,7 +3,8 @@
 }
 
 html, body {
-    background-color: #cdeaeb;
+    background-image: url(imagenes/manguitos.png);
+    background-repeat:repeat;
     height: 100%;
     margin: 0;
     padding: 0; 
@@ -21,7 +22,7 @@ header {
     max-width: 100%; 
     box-sizing: border-box; 
     justify-content: space-between; 
-    margin-bottom: 30px; /* Espacio debajo del header */
+    margin-bottom: 30px;
 }
 
 header img {
@@ -81,26 +82,12 @@ h3 {
     color: #1f6c6f;
     font-family:'Merriweather Sans', 'Helvetica', sans-serif;;
 }
-/*
-#perfil {
-    width: 1000px; 
-    height: 800px;
-    background-color: #109498; 
-    border-radius: 50px; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    padding: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); 
-}
-*/
 #perfil {
     display: flex;
     flex-direction: row; 
     align-items: center; 
     padding: 60px;
-    background-color: #1f6c6f;
+    background-color: #109498;
     margin-bottom: 20px;
     max-width: 1000px; 
     margin-left: auto; 
@@ -138,8 +125,69 @@ h3 {
     align-self: center;
     margin: 5px 0 0 0;
 }
+#educacion {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 60px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+#educacion div {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    width: 60%; 
+}
+
+#educacion h2, #educacion h3, #educacion p {
+    margin: 0; 
+}
+
+#educacion h2 {
+    font-size: 70px;
+    color: #1f6c6f;
+}
+
+#educacion h3 {
+    font-size: 40px;
+    color: #1f6c6f;
+}
+#educacion li {
+    display: inline; 
+}
+#educacion p {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 25px;
+    color: #1f6c6f;
+    margin: 0px 0 0 0;
+}
+
+#educacion img {
+    width: 400px;
+    border-radius: 50%;
+    border: 10px dashed #1f6c6f;
+    padding: 10px;
+    position: relative;
+    right: -50px; 
+}
+#educacion a{
+    font-family: 'Lora', 'Helvetica', sans-serif;
+    color: #1f6c6f;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 25px 0 0 0;
+}
 
 section {
+    background-color: #ffffff;
     margin-bottom: 20px; 
     padding: 20px;
 }
