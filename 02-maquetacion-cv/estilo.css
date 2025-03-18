@@ -1,12 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Libre Baskerville', serif; 
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 header {
     display: flex;
     color: #ffffff;
     background-color: #109498;
     padding: 15px;
-    font-family: 'Libre Baskerville', serif; 
+    font-family: 'Libre Baskerville', serif;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 100%;
 }
 
 header img {
@@ -18,8 +33,25 @@ header h1 {
     font-size: 2rem;
 }
 
+
+#main-menu ul {
+    padding: 0;
+}
+
+#main-menu li {
+    display: inline;
+}
+
+#main-menu a {
+    display: block;
+    padding: 5px 10px;
+}
+
+
 nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 20px;
 }
 
@@ -29,37 +61,29 @@ nav a {
     font-size: 1rem;
     transition: color 0.3s ease; 
 }
-#main menu ul{
-    padding: 0;
-}
-#main menu li{
-    display: inline;
-}
-#main menu a{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-h3{
-    color:#109498;
-    font-family: libre baskerville;
-}
-html, body {
-    height: 100%;
-    margin: 0; 
+
+h3 {
+    color: #109498;
+    font-family: 'Libre Baskerville', serif;
 }
 
 #contacto {
     display: flex;
-   
     padding: 20px;
     color: #ffffff;
     background-color: #109498;
     font-size: 13px;
     box-sizing: border-box;
     width: 100%;
-    margin-top: auto; 
+    margin-top: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
