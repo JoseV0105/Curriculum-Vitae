@@ -79,13 +79,12 @@ h3 {
     color: #1f6c6f;
     font-family:'Merriweather Sans', 'Helvetica', sans-serif;
 }
-
 #perfil {
     display: flex;
     flex-direction: row; 
     align-items: center; 
     padding: 60px;
-    background-color: #1f6c6f;
+    background-color: transparent; 
     margin-bottom: 20px;
     max-width: 1000px; 
     margin-left: auto; 
@@ -107,22 +106,24 @@ h3 {
 #perfil div {
     display: flex;
     flex-direction: column;
+    background-color: #1f6c6f; /* Fondo para el texto */
+    padding: 20px;
+    border-radius: 20px;
 }
 
 #perfil h2 {
     align-self: center;
-    font-size: 100px;
+    font-size: 100px; /* Mantener el tamaño original */
     color: #ffffff;
     margin: 0;
 }
 
 #perfil p {
     text-align: justify;
-    line-height:1;
-    font-size: 25px;
-    color:#ffffff;
-    align-self: center;
-    margin: 5px 0 0 0;
+    line-height: 1;
+    font-size: 25px; /* Mantener el tamaño original */
+    color: #ffffff;
+    margin: 10px 0 0 0;
 }
 
 #educacion {
@@ -156,7 +157,7 @@ h3 {
     margin-top: 0;
     margin-bottom: 20px;
     padding: 20px; 
-    border-radius: 0px; 
+    border-radius: 20px; 
     display: inline-block; 
     background-color: #1f6c6f; 
 }
