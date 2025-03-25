@@ -1,5 +1,5 @@
 * {
-    border: red 0px solid;
+    border: red 1px solid;
 }
 
 html, body {
@@ -217,7 +217,7 @@ h3 {
 #descripcion p {
     text-align: justify;
     line-height: 1.5;
-    font-size: 23px;
+    font-size: 20px;
     color: #176163;
     margin: 10px 0 0 0;
 }
@@ -248,8 +248,22 @@ h3 {
     margin: 25px 0 0 0;
 }
 
+/* Estilo para los enlaces dentro de los recuadros de educación */
+.educacion-link {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Heredar color del contenedor */
+}
+
+/* Añadir un efecto hover al pasar el ratón sobre la sección */
+.educacion-link:hover {
+    transform: scale(1.05); /* Agrandar ligeramente el recuadro al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Añadir sombra sutil */
+}
+
+
 section {
-    background-color: #ffffff;
+    background-color: #c8fdff;
+    border-radius: 2%;
     margin: 10px;
     margin-bottom: 40px; 
     padding: 40px;
@@ -264,6 +278,99 @@ h2 {
 p {
     font-family: 'Lora', 'Helvetica', sans-serif;
 }
+
+/* Estilo para el recuadro del título */
+#exp_academica h2 {
+    display: inline-block; /* Hace que el recuadro se ajuste al texto */
+    background-color: #176163; /* Fondo azul */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto dentro del recuadro */
+}
+
+
+.proyectos h2{
+    color: #176163;
+    font-size: 30px;
+    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
+}
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Eliminar el estilo de enlace en los recuadros */
+a.proyecto {
+    text-decoration: none; /* Eliminar el subrayado */
+    color: inherit; /* Mantener el color del texto sin cambiar a azul */
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #BBDEFB;
+}
+
+/* Para evitar que los recuadros se vean como enlaces, mantenerlos con su estilo original */
+a.proyecto:focus,
+a.proyecto:active {
+    outline: none; /* Eliminar el contorno cuando el enlace es clickeado o está en foco */
+}
+
+
+.proyecto {
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #176163;
+    border-radius: 8px;
+    background-color: #c8fdff;
+    transition: transform 0.3s ease;
+}
+.proyecto li{
+    text-align: left;
+}
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #BBDEFB;
+}
+
+.proyecto-img, .proyecto-img2 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.proyecto-img {
+    max-width: 200px;
+    margin: 0 auto;
+    border: 2px solid #4A90E2;
+}
+
+.proyecto-img2 {
+    max-width: 350px;
+    margin: 0 auto;
+    border: 2px solid #4A90E2;
+}
+
+@media (max-width: 768px) {
+    .proyecto {
+        flex: 1 1 100%;
+    }
+
+    .proyecto-img, .proyecto-img2 {
+        max-width: 100%;
+    }
+}
+
 
 #contacto {
     display: flex;
