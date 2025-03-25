@@ -1,9 +1,9 @@
 * {
-    border: red 1px solid;
+    border: red 0px solid;
 }
 
 html, body {
-    background-color:#78d0d1;
+    background-color: #78d0d1;
     height: 100%;
     margin: 0;
     padding: 0; 
@@ -77,21 +77,22 @@ nav a {
 
 h3 {
     color: #176163;
-    font-family:'Merriweather Sans', 'Helvetica', sans-serif;
+    font-family: 'Merriweather Sans', 'Helvetica', sans-serif;
 }
+
 #perfil {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    background-color: transparent; 
-    margin-bottom: 50px;
-    margin-left: auto; 
-    margin-right: auto; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 60px;
+    background-color: #c8fdff;
+    margin-bottom: 40px;  /* Ajusta el margen inferior */
+    max-width: 1400px;
+    margin-left: 20px;    /* Añadir margen izquierdo */
+    margin-right: 20px;   /* Añadir margen derecho */
     border-radius: 50px;
-    margin-top: 40px;
-    max-width: 90%;
-    box-sizing: border-box;
+    margin-top: 40px;  /* Mantén solo el margen superior */
 }
 
 #perfil img {
@@ -107,7 +108,7 @@ h3 {
 #perfil div {
     display: flex;
     flex-direction: column;
-    background-color: #176163;
+
     padding: 40px;
     border-radius: 20px;
     flex-grow: 1;
@@ -119,14 +120,19 @@ h3 {
     align-self: center;
     font-size: 70px;
     color: #ffffff;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px; 
+    border-radius: 20px; 
+    display: inline-block; 
+    background-color: #176163; 
 }
 
 #perfil p {
     text-align: justify;
     line-height: 1;
     font-size: 23px;
-    color: #ffffff;
+    color:  #176163;;
     margin: 10px 0 0 0;
 }
 
@@ -182,6 +188,48 @@ h3 {
     color: #176163;
     margin: 0px 0 0 0;
 }
+#descripcion {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    padding: 60px;
+    margin-bottom: 40px;  
+    max-width: 1400px;
+    margin-left: 20px;  
+    margin-right: 20px;   
+    margin-top: 40px;
+    background-color: #c8fdff; /* Fondo similar a educación */
+    border-radius: 20px; /* Fondo redondeado */
+}
+
+#descripcion h2 {
+    font-size: 50px; /* Título más pequeño */
+    color: #176163; /* Mismo color que el header */
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0; 
+    display: inline-block; 
+    border-bottom: 4px solid #176163; /* Línea divisoria más gruesa */
+    border-radius: 0; /* Asegura que no tenga bordes redondeados */
+}
+
+#descripcion p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 23px;
+    color: #176163;
+    margin: 10px 0 0 0;
+}
+
+#descripcion a {
+    font-family: 'Lora', 'Helvetica', sans-serif;
+    color: #176163;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 25px 0 0 0;
+}
+
 
 #educacion img {
     width: 400px;
