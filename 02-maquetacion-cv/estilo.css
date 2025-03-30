@@ -2,8 +2,9 @@
     border: red 1px solid;
 }
 
+/* Estilo global de la página */
 html, body {
-    background-color: #78d0d1;
+    background-color: #ffffff;
     height: 100%;
     margin: 0;
     padding: 0; 
@@ -11,31 +12,47 @@ html, body {
     font-family: 'Libre Baskerville', serif; 
 }
 
+body {
+    padding-top: 40px; /* Ajusta el valor según la altura de tu header */
+}
+
+
+/* Estilo para el header */
 header {
+    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
     display: flex;
-    color: #ffffff;
-    background-color: #176163;
+    color: #176163;
+    background-color: #ffffff;
     padding: 10px;
     align-items: center;
     width: 100%;
-    max-width: 100%; 
-    box-sizing: border-box; 
-    justify-content: space-between; 
-    margin-bottom: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    position: fixed;  /* Hace que el header se mantenga fijo */
+    top: 0;  /* Lo fija en la parte superior */
+    left: 0;
+    z-index: 1000;  /* Asegura que esté por encima del resto del contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Agrega sombra opcional */
 }
 
+
+/* Imagen dentro del header */
 header img {
-    max-width: 40px;
+    max-width: 50px;
     height: auto;
 }
 
+/* Título dentro del header */
 header h1 {
     font-size: 1.5rem;
     text-align: left; 
     margin: 0; 
 }
 
+/* Estilo del menú principal */
 #main-menu ul {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     padding: 0;
     margin: 0;
@@ -49,50 +66,69 @@ header h1 {
     display: inline; 
 }
 
+/* Enlaces del menú principal */
 #main-menu a {
     display: block;
     padding: 5px 13px;
-    color: #ffffff;
+    color: #176163;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
+    position: relative; /* Para posicionar el pseudo-elemento */
 }
 
+/* Pseudo-elemento para subrayar el enlace seleccionado */
+#main-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Ajusta según prefieras */
+    width: 0;
+    height: 2px;
+    background-color: #176163;
+    transition: width 0.3s ease;
+}
+
+/* Al pasar el mouse, se extiende la línea solo en el enlace hover */
+#main-menu a:hover::after,
+#main-menu a:focus::after {
+    width: 100%;
+}
+
+
+/* Navegación y efectos hover */
 nav {
     display: flex;
     width: 100%;
     justify-content: flex-end;
 }
 
-nav a:hover {
-    transform: scale(1.5);
-}
-
 nav a {
-    color: #ffffff;
+    color: #176163;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
+/* Estilos de los títulos */
 h3 {
     color: #176163;
     font-family: 'Merriweather Sans', 'Helvetica', sans-serif;
 }
 
+/* Perfil */
 #perfil {
     display: flex;
     flex-direction: row; 
     align-items: center; 
     justify-content: flex-start; 
     padding: 60px;
-    background-color: #c8fdff;
-    margin-bottom: 40px;  /* Ajusta el margen inferior */
+    margin-bottom: 40px;  
     max-width: 1400px;
-    margin-left: 20px;    /* Añadir margen izquierdo */
-    margin-right: 20px;   /* Añadir margen derecho */
+    margin-left: 20px;   
+    margin-right: 20px;   
     border-radius: 50px;
-    margin-top: 40px;  /* Mantén solo el margen superior */
+    margin-top: 40px;  
 }
 
 #perfil img {
@@ -102,13 +138,12 @@ h3 {
     margin-right: 55px; 
     border: 10px dashed #176163; 
     padding: 10px;
-    flex-shrink: 0; /* Evita que la imagen se reduzca */
+    flex-shrink: 0; 
 }
 
 #perfil div {
     display: flex;
     flex-direction: column;
-
     padding: 40px;
     border-radius: 20px;
     flex-grow: 1;
@@ -118,6 +153,7 @@ h3 {
 
 #perfil h2 {
     align-self: center;
+    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
     font-size: 70px;
     color: #ffffff;
     margin-top: 0;
@@ -132,112 +168,87 @@ h3 {
     text-align: justify;
     line-height: 1;
     font-size: 23px;
-    color:  #176163;;
+    color:  #176163;
     margin: 10px 0 0 0;
 }
 
+/* Educación */
+/* Sección de educación */
 #educacion {
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: flex-start; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 60px;
-    background-color: #c8fdff;
-    margin-bottom: 40px;  /* Ajusta el margen inferior */
-    max-width: 1400px;
-    margin-left: 20px;    /* Añadir margen izquierdo */
-    margin-right: 20px;   /* Añadir margen derecho */
-    border-radius: 50px;
-    margin-top: 40px;  /* Mantén solo el margen superior */
+    background-color: #176163;
+    margin-bottom: 40px;
+    max-width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0;
+    margin-top: 40px;
 }
+
+/* Estilos de la imagen dentro de la sección de educación */
+#educacion img {
+    width: 450px;  /* Aumenta el tamaño de la imagen */
+    height: auto;
+    border-radius: 50%;
+    border: 10px dashed #ffffff;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1; /* Asegura que la sombra no se mezcle con otros elementos */
+}
+
+/* Aplica la sombra solo cuando se pasa el mouse sobre la imagen */
+#educacion img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Solo sombra en la imagen */
+}
+
+/* Asegura que no haya sombra en el contenedor de la imagen */
 #educacion div {
     display: flex;
     flex-direction: column;
-    text-align: center; 
-    width: 60%; 
+    text-align: center;
+    width: 60%;
+    box-shadow: none; /* Aseguramos que el div contenedor no tenga sombra */
+    z-index: 0; /* Se asegura de que no se mezcle la sombra de la imagen con el div */
 }
 
+/* Estilos de los títulos */
 #educacion h2, #educacion h3, #educacion p {
-    margin: 0; 
+    margin: 0;
 }
 
 #educacion h2 {
     font-size: 70px;
     color: #ffffff;
     margin-top: 0;
-    margin-bottom: 20px;
-    padding: 20px; 
-    border-radius: 20px; 
-    display: inline-block; 
-    background-color: #176163; 
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
 }
 
 #educacion h3 {
-    font-size: 40px;
-    color: #176163;
-}
-
-#educacion li {
-    display: inline; 
+    font-size: 38px;
+    color: #ffffff;
+    padding: 10px 30px;
+    background-color: #176163;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 10px 0;
+    border: 4px solid #ffffff;
 }
 
 #educacion p {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 25px;
-    color: #176163;
-    margin: 0px 0 0 0;
-}
-#descripcion {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: flex-start; 
-    padding: 60px;
-    margin-bottom: 40px;  
-    max-width: 1400px;
-    margin-left: 20px;  
-    margin-right: 20px;   
-    margin-top: 40px;
-    background-color: #c8fdff; /* Fondo similar a educación */
-    border-radius: 20px; /* Fondo redondeado */
-}
-
-#descripcion h2 {
-    font-size: 50px; /* Título más pequeño */
-    color: #176163; /* Mismo color que el header */
-    margin-top: 0;
-    margin-bottom: 20px;
-    padding: 0; 
-    display: inline-block; 
-    border-bottom: 4px solid #176163; /* Línea divisoria más gruesa */
-    border-radius: 0; /* Asegura que no tenga bordes redondeados */
-}
-
-#descripcion p {
     text-align: justify;
     line-height: 1.5;
-    font-size: 20px;
-    color: #176163;
-    margin: 10px 0 0 0;
-}
-
-#descripcion a {
-    font-family: 'Lora', 'Helvetica', sans-serif;
-    color: #176163;
-    text-decoration: none;
-    font-size: 25px;
-    margin: 25px 0 0 0;
-}
-
-
-#educacion img {
-    width: 400px;
-    border-radius: 50%;
-    border: 10px dashed #176163;
-    padding: 10px;
-    position: relative;
-    right: -50px; 
+    font-size: 22px;
+    color: #ffffff;
+    margin: 0px 0 0 0;
 }
 
 #educacion a {
@@ -245,56 +256,39 @@ h3 {
     color: #176163;
     text-decoration: none;
     font-size: 25px;
-    margin: 25px 0 0 0;
 }
 
-/* Estilo para los enlaces dentro de los recuadros de educación */
 .educacion-link {
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit; /* Heredar color del contenedor */
+    text-decoration: none;
+    color: #ffffff;
 }
-
-/* Añadir un efecto hover al pasar el ratón sobre la sección */
-.educacion-link:hover {
-    transform: scale(1.05); /* Agrandar ligeramente el recuadro al pasar el ratón */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Añadir sombra sutil */
-}
-
 
 section {
-    background-color: #c8fdff;
     border-radius: 2%;
     margin: 10px;
     margin-bottom: 40px; 
     padding: 40px;
 }
 
-h2 {
-    color: #176163;
-    font-size: 30px;
-    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
-}
 
-p {
+section p {
     font-family: 'Lora', 'Helvetica', sans-serif;
 }
 
-/* Estilo para el recuadro del título */
-#exp_academica h2 {
-    display: inline-block; /* Hace que el recuadro se ajuste al texto */
-    background-color: #176163; /* Fondo azul */
-    color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado alrededor del texto */
-    border-radius: 8px; /* Bordes redondeados */
-    text-align: center; /* Centra el texto dentro del recuadro */
+/* Sección de proyectos */
+#proyectos {
+    background-color: #BBDEFB;
 }
 
 
-.proyectos h2{
-    color: #176163;
-    font-size: 30px;
-    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
+
+.proyectos h2,
+.proyecto p,
+.proyecto li,
+.proyecto h3 {
+    color: #ffffff; /* Fuerza el color blanco en el título, párrafos, elementos de lista y h3 */
 }
+
 .proyectos-container {
     display: flex;
     flex-wrap: wrap;
@@ -303,24 +297,16 @@ p {
     padding: 20px;
 }
 
-/* Eliminar el estilo de enlace en los recuadros */
 a.proyecto {
     text-decoration: none; /* Eliminar el subrayado */
     color: inherit; /* Mantener el color del texto sin cambiar a azul */
 }
 
 .proyecto:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #BBDEFB;
+    background-color: #176163; /* Sin color azul */
 }
-
-/* Para evitar que los recuadros se vean como enlaces, mantenerlos con su estilo original */
-a.proyecto:focus,
-a.proyecto:active {
-    outline: none; /* Eliminar el contorno cuando el enlace es clickeado o está en foco */
-}
-
 
 .proyecto {
     flex: 1 1 calc(33% - 20px);
@@ -330,16 +316,13 @@ a.proyecto:active {
     padding: 15px;
     border: 2px solid #176163;
     border-radius: 8px;
-    background-color: #c8fdff;
+    background-color: #176163;
     transition: transform 0.3s ease;
+    color: #ffffff; /* Fuerza que el texto dentro del proyecto sea blanco */
 }
-.proyecto li{
+
+.proyecto li {
     text-align: left;
-}
-.proyecto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #BBDEFB;
 }
 
 .proyecto-img, .proyecto-img2 {
@@ -352,26 +335,154 @@ a.proyecto:active {
 .proyecto-img {
     max-width: 200px;
     margin: 0 auto;
-    border: 2px solid #4A90E2;
 }
 
 .proyecto-img2 {
     max-width: 350px;
     margin: 0 auto;
-    border: 2px solid #4A90E2;
 }
 
 @media (max-width: 768px) {
     .proyecto {
         flex: 1 1 100%;
     }
-
     .proyecto-img, .proyecto-img2 {
         max-width: 100%;
     }
 }
 
+/* Estilos generales */
+/* Estilos generales */
+#habilidades {
+    text-align: center;
+    padding: 50px 0;
+}
 
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.carrusel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    flex-direction: column;
+}
+
+.carrusel-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+/* Contenedor del texto */
+.texto {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.texto h3 {
+    font-size: 2rem;
+    color: #176163;
+}
+
+.texto p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Contenedor de la imagen */
+.imagen {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Degradado para que la imagen se fusione con el texto */
+.imagen::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+/* Ocultar los radios */
+input[type="radio"] {
+    display: none;
+}
+
+/* Navegación del carrusel */
+.carrusel-navegacion {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carrusel-navegacion label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #176163;
+    cursor: pointer;
+}
+
+/* Movimiento del carrusel */
+input[type="radio"]:nth-of-type(1):checked ~ .carrusel-items {
+    transform: translateY(0%);
+}
+
+input[type="radio"]:nth-of-type(2):checked ~ .carrusel-items {
+    transform: translateY(-100%);
+}
+
+input[type="radio"]:nth-of-type(3):checked ~ .carrusel-items {
+    transform: translateY(-200%);
+}
+
+input[type="radio"]:nth-of-type(4):checked ~ .carrusel-items {
+    transform: translateY(-300%);
+}
+
+input[type="radio"]:nth-of-type(5):checked ~ .carrusel-items {
+    transform: translateY(-400%);
+}
+
+/* Resaltar el indicador seleccionado */
+input[type="radio"]:nth-of-type(1):checked ~ .carrusel-navegacion label:nth-of-type(1),
+input[type="radio"]:nth-of-type(2):checked ~ .carrusel-navegacion label:nth-of-type(2),
+input[type="radio"]:nth-of-type(3):checked ~ .carrusel-navegacion label:nth-of-type(3),
+input[type="radio"]:nth-of-type(4):checked ~ .carrusel-navegacion label:nth-of-type(4),
+input[type="radio"]:nth-of-type(5):checked ~ .carrusel-navegacion label:nth-of-type(5) {
+    background-color: #0a4e45;
+}
+
+/* Sección de contacto */
 #contacto {
     display: flex;
     padding: 20px;
@@ -385,3 +496,38 @@ a.proyecto:active {
     justify-content: center;
     align-items: center;
 }
+
+h2 {
+    align-self: center;
+    font-family: 'Bebas Neue', 'Helvetica', sans-serif;
+    font-size: 30px;
+    color: #176163;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 20px; 
+    border-radius: 20px; 
+    display: inline-block; 
+}
+
+section {
+    position: relative;
+    padding-top: 100px;
+    margin: 0;
+}
+
+/* Agrega un mayor impacto al pseudo-elemento */
+section::before {
+    content: "";
+    display: block;
+    height: 20px; /* Ajusta esta altura si necesitas más espacio */
+    background-color: #f1f1f1; /* Cambia el color si es necesario */
+    position: absolute;
+    top: 0; /* Asegúrate de que aparezca antes de la sección */
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Lo coloca detrás del contenido de la sección */
+}
+
+#perfil, #educacion, #habilidades {
+        padding: 100px 20px 100px 20px;  /* Padding: top, right, bottom, left */
+    }

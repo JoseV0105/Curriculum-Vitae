@@ -8,28 +8,173 @@
 </head>
 <body>
     <header>
-        <img src="imagenes/logo_blanco.png" alt="Logo Vahiro" width="80"/>
-        <h1>VAHIRO</h1>
+        <a href="#perfil"><img src="imagenes/logo_vahiro.png" alt="Logo Vahiro" width="80"/></a>
+        <a href="#perfil"><h1>VAHIRO</h1></a>
         <nav id="main-menu">
             <ul>
-                <li><a href="index.html">Perfil</a></li>
-                <li><a href="educacion.html">Educación</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#exp_academica">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="perfil">
-        <img src="imagenes/Ajolote.jpg" alt="Logo Vahiro" width="100"/>
+        <a href="#inicio"><img src="imagenes/Ajolote.jpg" alt="Logo Vahiro" width="100"/></a>
         <div id="texto">
-            <h2>Sobre mí</h2>
+            <h2>Sobre mí</h2></a>
             <p>
                 Mi nombre es José del Carmen Villarino Caamal y estudio Ingeniería en Diseño Multimedia. Mi enfoque principal hasta ahora ha sido aprender y dominar herramientas como Blender para modelado 3D y animación, así como profundizar en diseño gráfico e ilustración. Hasta ahora, he adquirido habilidades en la creación de contenidos 3D, edición digital e ilustración, y mi objetivo es seguir perfeccionando estas herramientas para aplicarlas en futuros proyectos en el campo del diseño multimedia.
             </p>
         </div>
     </section>
+
+    <section id="educacion">
+        <div>
+            <h2>Educación</h2>
+            <h3>Ing en Diseño Multimedia (2023 - 2027)</h3>
+            <p>
+                Actualmente estudio Ingeniería en Diseño Multimedia, donde estoy aprendiendo a dominar herramientas digitales y técnicas creativas en áreas como diseño gráfico, modelado 3D, animación en 2D y 3D, fotografía, ilustración, programación y edición de audio y video. Estas habilidades me permiten crear soluciones visuales e interactivas aplicables en diversas industrias, como el entretenimiento, la publicidad y el diseño web. Mi formación integral me prepara para afrontar los desafíos del mundo digital, adaptándome a las necesidades y requisitos de diferentes plataformas.            
+            </p>
+        </div>
+        <!-- El contenedor de la imagen no debería estar envuelto de más -->
+        <a href="https://www.unacar.mx/" class="educacion-link" target="_blank">
+            <img src="imagenes/unacar_foto.jpg" alt="Foto de UNACAR" width="100" />
+        </a>
+    </section>
+
+    <section id="exp_academica">
+        <div>
+            <h2>Proyectos Escolares</h2>
+            <div class="proyectos-container">
+                <a href="https://www.facebook.com/share/1AKuWwxEmX/?mibextid=wwXIfr" class="proyecto" target="_blank">
+                    <h3>Proyecto de Diseño para Sirloin Express</h3>
+                    <p>Elaboración en equipo de un diseño visual para la taquería Sirloin Express, donde desarrollamos material promocional para sus servicios, incluyendo temáticas especiales.</p>
+                    <ul>
+                        <li>Herramientas utilizadas: Adobe Illustrator, Photoshop</li>
+                        <li>Habilidades adquiridas: Trabajo en equipo, Diseño gráfico, modificación de logotipos, diseño de material promocional</li>
+                    </ul>
+                    <img src="imagenes/sirloin.jpg" alt="Logo Sirloin" class="proyecto-img">
+                </a>
+
+                <a href="https://drive.google.com/file/d/1ZXDMyblcQ2aOPvXXYez0ErnM6VzcbpM_/view?usp=sharing" class="proyecto" target="_blank">
+                    <h3>Proyecto Grupal: Modelado de Vecindario</h3>
+                    <p>Animación 3D de un vecindario. Fui responsable de reunir los modelos y realizar una breve animación donde la cámara se va desplazando para mostrar las diferentes casas.</p>
+                    <ul>
+                        <li>Herramientas utilizadas: Blender</li>
+                        <li>Habilidades adquiridas: Modelado 3D, animación, trabajo en equipo, gestión de proyectos grupales</li>
+                    </ul>
+                    <img src="imagenes/vecindario.png" alt="Captura del Video Vecindario" class="proyecto-img2">
+                </a>
+
+                <a href="https://www.facebook.com/share/15w2uCwmHw/?mibextid=wwXIfr" class="proyecto" target="_blank">
+                    <h3>Proyecto Actual: Creación de Página para IDM</h3>
+                    <p>Desarrollo en equipo de una página web dentro de una asignatura de Ingeniería en Diseño Multimedia, con el propósito de promocionar la carrera y resaltar sus principales características.</p>
+                    <ul>
+                        <li>Herramientas utilizadas: HTML, CSS, JavaScript, Adobe XD</li>
+                        <li>Habilidades adquiridas: Desarrollo web, diseño de interfaces, maquetación, programación front-end</li>
+                        <li>Estado: En desarrollo</li>
+                    </ul>
+                    <img src="imagenes/logo_idm.jpg" alt="Logo de idm(pag en proceso)" class="proyecto-img">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+    
+        <div class="carrusel">
+            <input type="radio" id="habilidad1" name="habilidad" checked>
+            <input type="radio" id="habilidad2" name="habilidad">
+            <input type="radio" id="habilidad3" name="habilidad">
+            <input type="radio" id="habilidad4" name="habilidad">
+            <input type="radio" id="habilidad5" name="habilidad">
+    
+            <div class="carrusel-items">
+                <!-- Photoshop -->
+                <div class="carrusel-item">
+                    <div class="texto">
+                        <h3>Photoshop</h3>
+                        <p>Edición y manipulación de imágenes, diseño gráfico y creación de material publicitario.</p>
+                        <p>Uso avanzado de capas, máscaras, filtros y herramientas de retoque fotográfico para crear contenido de alta calidad.</p>
+                    </div>
+                    <div class="imagen">
+                        <img src="photoshop.jpg" alt="Photoshop">
+                    </div>
+                </div>
+    
+                <!-- Blender -->
+                <div class="carrusel-item">
+                    <div class="texto">
+                        <h3>Blender</h3>
+                        <p>Modelado, texturización y animación 3D para proyectos multimedia.</p>
+                        <p>Creación de modelos, rigging y renderizado en entornos realistas o estilizados.</p>
+                    </div>
+                    <div class="imagen">
+                        <img src="blender.jpg" alt="Blender">
+                    </div>
+                </div>
+    
+                <!-- Programación -->
+                <div class="carrusel-item">
+                    <div class="texto">
+                        <h3>Programación en HTML y C++</h3>
+                        <p>Desarrollo web con HTML y conocimientos en programación con C++.</p>
+                        <p>Capacidad de estructurar sitios web y escribir algoritmos eficientes.</p>
+                    </div>
+                    <div class="imagen">
+                        <img src="programacion.jpg" alt="Programación">
+                    </div>
+                </div>
+    
+                <!-- Ilustración -->
+                <div class="carrusel-item">
+                    <div class="texto">
+                        <h3>Ilustración en Papel y Digital</h3>
+                        <p>Creación de ilustraciones a mano y en medios digitales.</p>
+                        <p>Experiencia en Procreate, Adobe Illustrator y técnicas tradicionales.</p>
+                    </div>
+                    <div class="imagen">
+                        <img src="ilustracion.jpg" alt="Ilustración">
+                    </div>
+                </div>
+    
+                <!-- Ensamble de PC -->
+                <div class="carrusel-item">
+                    <div class="texto">
+                        <h3>Ensamble de Computadoras</h3>
+                        <p>Montaje y configuración de hardware para equipos de alto rendimiento.</p>
+                        <p>Optimización de componentes para gaming, edición y desarrollo.</p>
+                    </div>
+                    <div class="imagen">
+                        <img src="pc.jpg" alt="PC">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="carrusel-navegacion">
+                <label for="habilidad1"></label>
+                <label for="habilidad2"></label>
+                <label for="habilidad3"></label>
+                <label for="habilidad4"></label>
+                <label for="habilidad5"></label>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+<section id="portafolio">
+    <div>
+
+    </div>
+<h2>Portafolio</h2>
+</section>
+
     <footer id="contacto">
         <div>
             <p>Si deseas contactarme para colaboraciones, proyectos o cualquier otra consulta, puedes escribirme a mi correo electrónico o llamarme a mi número de teléfono.</p>
