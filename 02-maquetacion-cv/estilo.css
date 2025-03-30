@@ -47,12 +47,12 @@ header h1 {
     margin: 0; 
 }
 #inicio a{
-    text-decoration: none !important; /* Elimina el subrayado de los enlaces */
-    color: #176163; /* Hereda el color del texto del contenedor */
+    text-decoration: none !important; 
+    color: #176163;
 }
 
 #main-menu li {
-    display: inline; /* Esto no es necesario si ya estás usando flexbox en el contenedor padre */
+    display: inline; 
 }
 #main-menu ul {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -452,23 +452,20 @@ input[type="radio"]:nth-of-type(5):checked ~ .carrusel-navegacion label:nth-of-t
     align-items: center;
 }
 #contacto img {
-    max-width: 50px; /* Ajusta según el tamaño deseado */
+    max-width: 50px; 
     height: auto;
     margin: 10px;
 }
-
 .imagenes {
     display: flex;
-    justify-content: center; /* Centra las imágenes */
-    gap: 20px; /* Espacio entre las imágenes */
-    margin-bottom: 20px; /* Espacio debajo de las imágenes */
+    justify-content: center; 
+    gap: 20px; 
+    margin-bottom: 20px; 
 }
 
 .imagenes img {
-    width: 100px; /* Tamaño de las imágenes */
+    width: 100px;
 }
-
-
 h2 {
     align-self: center;
     font-family: 'Bebas Neue', 'Helvetica', sans-serif;
