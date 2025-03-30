@@ -1,6 +1,10 @@
 * {
     border: red 0px solid;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
     background-color: #ffffff;
     height: 100%;
@@ -433,7 +437,7 @@ input[type="radio"]:nth-of-type(2):checked ~ .carrusel-navegacion label:nth-of-t
 input[type="radio"]:nth-of-type(3):checked ~ .carrusel-navegacion label:nth-of-type(3),
 input[type="radio"]:nth-of-type(4):checked ~ .carrusel-navegacion label:nth-of-type(4),
 input[type="radio"]:nth-of-type(5):checked ~ .carrusel-navegacion label:nth-of-type(5) {
-    background-color: #0a4e45;
+    background-color: #032d28;
 }
 #contacto {
     display: flex;
