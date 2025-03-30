@@ -1,5 +1,5 @@
 * {
-    border: red 0px solid;
+    border: red 1px solid;
 }
 
 html {
@@ -13,9 +13,6 @@ html, body {
     box-sizing: border-box;
     font-family: 'Libre Baskerville', serif; 
 }
-body {
-    padding-top: 40px; 
-}
 header {
     text-decoration: none !important;
     color: inherit !important;
@@ -26,7 +23,6 @@ header {
     padding: 10px;
     align-items: center;
     width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
     position: fixed;  
@@ -54,6 +50,10 @@ header h1 {
     text-decoration: none !important; /* Elimina el subrayado de los enlaces */
     color: #176163; /* Hereda el color del texto del contenedor */
 }
+
+#main-menu li {
+    display: inline; /* Esto no es necesario si ya estás usando flexbox en el contenedor padre */
+}
 #main-menu ul {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
@@ -64,17 +64,14 @@ header h1 {
     width: 100%;
     box-sizing: border-box;
 }
-#main-menu li {
-    display: inline; 
-}
 #main-menu a {
+    position: relative;
     display: block;
     padding: 5px 13px;
     color: #176163;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
-    position: relative; 
 }
 #main-menu a::after {
     content: "";
@@ -107,16 +104,11 @@ h3 {
 }
 #perfil {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
     padding: 60px;
-    margin-bottom: 40px;
+    margin: 40px auto;
     max-width: 1200px; 
-    margin-left: auto; 
-    margin-right: auto;
     border-radius: 50px;
-    margin-top: 40px;
 }
 #perfil img {
     width: 400px; 
@@ -143,10 +135,9 @@ h3 {
     color: #176163;
     margin-top: 0;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     display: inline-block;
     border-bottom: 5px solid #176163; 
-    padding-bottom: 10px; 
     border-radius: 0; 
 }
 #perfil p {
@@ -160,17 +151,12 @@ h3 {
 }
 #educacion {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 60px;
     background-color: #176163;
     margin-bottom: 40px;
     max-width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    border-radius: 0;
-    margin-top: 40px;
 }
 #educacion img {
     width: 450px;  
@@ -179,8 +165,6 @@ h3 {
     border: 10px dashed #ffffff;
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    z-index: 1; 
 }
 #educacion img:hover {
     transform: translateY(-5px);
@@ -237,7 +221,6 @@ h3 {
 section {
     border-radius: 2%;
     margin: 10px;
-    margin-bottom: 40px; 
     padding: 40px;
 }
 section p {
@@ -264,10 +247,6 @@ a.proyecto {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #176163;
 }
-.proyecto h2 {
-    margin: 0;
-    padding: 0; 
-}
 .proyecto h3 {
     font-size: 30px;;
 }
@@ -288,6 +267,7 @@ a.proyecto {
     align-items: center;
 }
 .proyecto li {
+    font-family:'Lora', 'Helvetica', sans-serif;
     text-align: left;
 }
 .proyecto-img, .proyecto-img2 {
@@ -368,10 +348,7 @@ a.proyecto {
     overflow: hidden; 
 }
 .imagen img {
-    width: 100%;
     height: 100%; 
-    object-fit: cover; 
-    display: block;
 }
 .imagen::before {
     content: "";
@@ -448,7 +425,7 @@ input[type="radio"]:nth-of-type(5):checked ~ .carrusel-navegacion label:nth-of-t
         height: 20rem;
         gap:1rem;
         padding: 0 2rem;
-        margin-bottom: 8rem;
+        margin-bottom: 6rem;
     }
     .galery>div{
         flex:1;
@@ -468,12 +445,30 @@ input[type="radio"]:nth-of-type(5):checked ~ .carrusel-navegacion label:nth-of-t
     background-color: #176163;
     font-size: 14px;
     box-sizing: border-box;
-    width: 100%;
+    width: 100%; 
     margin-top: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#contacto img {
+    max-width: 50px; /* Ajusta según el tamaño deseado */
+    height: auto;
+    margin: 10px;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-bottom: 20px; /* Espacio debajo de las imágenes */
+}
+
+.imagenes img {
+    width: 100px; /* Tamaño de las imágenes */
+}
+
+
 h2 {
     align-self: center;
     font-family: 'Bebas Neue', 'Helvetica', sans-serif;
@@ -482,34 +477,17 @@ h2 {
     margin-top: 0;
     margin-bottom: 20px;
     padding: 20px; 
-    border-radius: 20px; 
     display: inline-block; 
     border-bottom: 5px solid #176163;
-    padding-bottom: 10px;
-    border-radius: 0;
 }
 section {
     position: relative;
     padding-top: 100px;
     margin: 0;
 }
-section::before {
-    content: "";
-    display: block;
-    height: 20px;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    z-index: -1;
-}
 #perfil, #educacion, #habilidades, #portafolio{
-        padding: 100px 20px 100px 20px;  
+    padding: 100px 20px;
     }
-
     body {
-        background-image: url(imagenes/manguitos.png); 
-        background-repeat: repeat;
-        background-size: auto;
-        background-position: top left;
+        background-image: url(imagenes/fondo.png); 
     }
